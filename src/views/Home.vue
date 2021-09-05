@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="coverImage"></div>
+    <h1 class="productTitle">All Products</h1>
     <div
       class="cstmHomeContainer"
       v-if="products"
@@ -44,6 +45,10 @@ export default {
 .cstmHomeContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.productTitle {
+  margin: 0px;
+  margin-top: 20px;
 }
 </style>>
 

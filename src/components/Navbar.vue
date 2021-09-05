@@ -7,10 +7,15 @@
           class="navbar-brand"
         >Vue-commerce</router-link>
         <div class="d-inline-flex p-2">
-          <div class="search-container">
-            <i class="fas fa-search"></i>
-            <p>search</p>
-          </div>
+          <router-link
+            to="/search"
+            class="navbar-brand"
+          >
+            <div class="search-container">
+              <i class="fas fa-search cstmFont"></i>
+              <p class="cstmFonttext">search</p>
+            </div>
+          </router-link>
           <div class="cartSection">
             <i class="fas fa-cart-plus"></i>
           </div>
@@ -66,5 +71,9 @@ export default {
   margin: 0px;
   margin-left: 10px;
   margin-bottom: 2px;
+}
+.cstmFonttext {
+  color: black;
+  font-weight: 200;
 }
 </style>
