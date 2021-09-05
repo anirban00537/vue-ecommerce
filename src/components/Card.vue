@@ -1,30 +1,40 @@
 <template>
-  <div class="cardProduct">
-    <img
-      :src=product.imageUrl
-      class="cvr-img "
-      alt="..."
-    >
-    <div class="infoSection">
-      <h5>{{product.title}}</h5>
-      <h3 class="price">Price: 400</h3>
-      <p class="max-lines">{{product.description}}
+  <router-link
+    :to="{ name: 'Details', params: { id } }"
+    class="navbar-brand"
+  >
+    <div class="cardProduct">
+      <img
+        :src=product.imageUrl
+        class="cvr-img "
+        alt="..."
+      >
+      <div class="infoSection">
+        <h5>{{product.title}}</h5>
+        <h3 class="price">Price: 400</h3>
+        <p class="max-lines">{{product.description}}
 
-      </p>
+        </p>
+      </div>
     </div>
-  </div>
+  </router-link>
 </template>
 <script>
 export default {
   name: "Card",
   props: {
     product: Object
+  },
+  data() {
+    return {
+      id: this.product.id
+    };
   }
 };
 </script>
 <style scoped>
 .cardProduct {
-  height: 280px;
+  height: 260px;
   width: 240px;
   margin: 10px;
   margin-top: 40px;
@@ -45,6 +55,7 @@ export default {
   line-height: 1.8em;
   font-size: 12px;
   margin: 0px;
+  color: #aaaaaa;
 }
 .price {
   color: rgb(55, 188, 237);
@@ -54,5 +65,9 @@ export default {
 .cvr-img {
   max-height: 160px;
   width: 100%;
+}
+a {
+  color: #595959;
+  text-decoration: none;
 }
 </style>

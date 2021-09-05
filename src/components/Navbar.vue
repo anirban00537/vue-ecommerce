@@ -7,18 +7,10 @@
           class="navbar-brand"
         >Vue-commerce</router-link>
         <div class="d-inline-flex p-2">
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            >
-            <button
-              class="btn btn-outline-success"
-              type="submit"
-            >Search</button>
-          </form>
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <p>search</p>
+          </div>
           <div class="cartSection">
             <i class="fas fa-cart-plus"></i>
           </div>
@@ -35,7 +27,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .navbar-cstm {
   background-color: #fcfffe;
   box-shadow: 3px 4px 13px 9px rgb(235, 235, 235);
@@ -44,7 +36,8 @@ export default {
   color: black !important;
 }
 .navbar-brand {
-  color: black;
+  color: #4fc08d;
+  font-weight: 700;
 }
 
 .cartSection {
@@ -60,5 +53,18 @@ export default {
 }
 .fa-cart-plus {
   color: white;
+}
+.search-container {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+  border-radius: 10px;
+  padding-left: 20px;
+}
+.search-container > p {
+  margin: 0px;
+  margin-left: 10px;
+  margin-bottom: 2px;
 }
 </style>

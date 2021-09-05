@@ -11,7 +11,6 @@
         :product="product"
       />
     </div>
-
   </div>
 </template>
 
